@@ -69,3 +69,28 @@ module Problem8 =
     let test() =
         printf "foo satisfies all three steps of the Checklist for Programming with Recursion."
         ()
+
+module Problem9 = 
+    //Which of the following is the type that F# infers for (fun f -> f 17)? Select one:
+
+    let test() =
+        printf "(int -> 'a) -> 'a"
+        ()
+
+module Problem10= 
+    //Which of the following has type int -> int list? Select one:
+
+    //(@) [5] // list -> int
+    //[fun x -> x+1] //Not sure
+    //fun x -> 5::x // --- int list -> int list
+    //fun x -> x::[5] // int -> int list
+
+    let test() =
+        printf "fun x -> x::[5] has type int -> int list"
+        ()
+
+module Problem11= 
+
+    let test() =
+        printf "foo satisfies all three steps of the Checklist for Programming with Recursion."
+        ()
