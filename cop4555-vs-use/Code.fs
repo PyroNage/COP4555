@@ -90,7 +90,52 @@ module Problem10=
         ()
 
 module Problem11= 
+    //What type does F# infer for the expression (3, [], true) ? Select one:
+
+    //(3, [], true)
 
     let test() =
-        printf "foo satisfies all three steps of the Checklist for Programming with Recursion."
+        printf "int * 'a list * bool"
+        ()
+
+module Problem12= 
+    //What type does F# infer for the expression fun x y -> x+y+"." ? Select one:
+
+    //fun x y -> x+y+"."
+    
+    let test() =
+        printf "VS say ^a -> ^b -> ^d which is string -> string -> string"
+        ()
+
+module Problem13= 
+    //What type does F# infer for the expression fun xs -> List.map (+) xs ? Select one:
+
+    //fun xs -> List.map (+) xs 
+
+    let test() =
+        printf "int list -> (int -> int) list"
+        ()
+
+module Problem14= 
+    //Which of the following does F# infer to have type string -> string -> string ? Select one:
+
+    //fun x -> fun y -> x y "." //('a -> string -> 'b) -> 'a -> 'b
+    //fun x y -> String.length x * String.length y // string -> string -> int
+    //fun (x, y) -> x + y + "." //^a * ^b -> ^d
+    //(+) //^a -> ^b -> ^c
+
+    let test() =
+        printf "(+)"
+        ()
+
+module Problem15= 
+    //Which of the following does F# infer to have type (string -> string) -> string ? Select one:
+
+    //fun f -> String.length (f "cat") //(string -> string) -> int
+    //fun x y -> x + " " + y //^a -> ^c -> ^d 
+    //fun f -> f (f "cat") // (string -> string) -> string
+    //fun f -> f "cat" //(string -> 'a) -> 'a
+
+    let test() =
+        printf "fun f -> f (f \"cat\")"
         ()
