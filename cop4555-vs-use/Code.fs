@@ -27,5 +27,19 @@ module Problem2 =
 module Problem3 = 
 
     let test() =
-        printfn ""
+        printfn "If an F# function has type 'a -> 'b when 'a : comparison, which of the following is not a legal type for it? Select one: (float -> float) -> bool"
+        ()
+
+module Problem4 = 
+
+    let test() =
+        printfn "Which of the following statements about F# lists is not true? - Their built-in functions are polymorphic."
+        ()
+
+module Problem5 = 
+    //Which of the following F# expressions evaluates to [1; 2; 3]? Select one:
+
+    let test() =
+        printfn "%A" (1::2::3::[]) //Output - [1; 2; 3] This is the answer
+        printfn "%A" ([1; 2; 3]::[])  //Output - [[1; 2; 3]] list inside a list
         ()
