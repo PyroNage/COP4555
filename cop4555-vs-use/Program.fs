@@ -2,7 +2,7 @@
 let main argv =
     printfn "Arguments: %A" argv
 
-    Code.Problems1.test()
+    Code.Problem1.test()
 
     printfn "Press enter to continue ..."
     System.Console.ReadLine() |> ignore
