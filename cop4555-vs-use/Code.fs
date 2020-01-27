@@ -43,3 +43,29 @@ module Problem5 =
         printfn "%A" (1::2::3::[]) //Output - [1; 2; 3] This is the answer
         printfn "%A" ([1; 2; 3]::[])  //Output - [[1; 2; 3]] list inside a list
         ()
+
+module Problem6 = 
+    //How does F# interpret the expression List.map List.head foo @ baz? Select one:
+
+    let test() =
+        printf "((List.map List.head) foo) @ baz"
+        ()
+
+module Problem7 = 
+    //How does F# interpret the type int * bool -> string list? Select one:
+
+    let test() =
+        printfn "(int * bool) -> (string list)"
+        ()
+
+module Problem8 = 
+    let rec foo = function
+            | (xs, [])    -> xs
+            | (xs, y::ys) -> foo (xs@[y], ys)
+
+    //1.Make sure that each base case returns the correct answer.
+    //2.Make sure that each non-base case returns the correct answer, assuming that each of its recursive calls returns the correct answer.
+    //3.Make sure that each recursive call is on a smallerinput
+    let test() =
+        printf "foo satisfies all three steps of the Checklist for Programming with Recursion."
+        ()
