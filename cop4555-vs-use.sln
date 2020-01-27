@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "cop4555-vs-use", "cop4555-vs-use\cop4555-vs-use.fsproj", "{1E5DF46E-D9CB-4FE6-A75C-E899022CEE20}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|anycpu = Debug|anycpu
+		Release|anycpu = Release|anycpu
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E5DF46E-D9CB-4FE6-A75C-E899022CEE20}.Debug|anycpu.ActiveCfg = Debug|anycpu
+		{1E5DF46E-D9CB-4FE6-A75C-E899022CEE20}.Debug|anycpu.Build.0 = Debug|anycpu
+		{1E5DF46E-D9CB-4FE6-A75C-E899022CEE20}.Release|anycpu.ActiveCfg = Release|anycpu
+		{1E5DF46E-D9CB-4FE6-A75C-E899022CEE20}.Release|anycpu.Build.0 = Release|anycpu
+	EndGlobalSection
+EndGlobal
