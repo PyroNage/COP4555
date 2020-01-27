@@ -139,3 +139,13 @@ module Problem15=
     let test() =
         printf "fun f -> f (f \"cat\")"
         ()
+
+module Problem16= 
+
+    let rec gcd = function
+            | (a,0) -> a
+            | (a,b) -> gcd (b, a % b)
+
+    let test() =
+
+        ()
