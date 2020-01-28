@@ -146,6 +146,38 @@ module Problem16=
             | (a,0) -> a
             | (a,b) -> gcd (b, a % b)
 
-    let test() =
+    let (.*) (a,b) (c,d) =
+                let commonDenom = (gcd(a*c, b*d))
+                printf "%A" (a*c/commonDenom, b*d/commonDenom)
+    let (.+) (a,b) (c,d) =
+                if b = d then let commonDenom = (gcd(a+c,b))
+                              printf "%A" ((a+c)/commonDenom, b/commonDenom)
+                else let commonDenom = (gcd(a*d+b*c,b*d))
+                     printf "%A" ((a*d + c*b)/commonDenom, (b*d)/commonDenom)
 
+    let test() =
+        printfn "%A" ((5,10) .* (3,8))   // 3/16
+        printfn "%A" ((6,9) .+ (2,4))    // 7/6
+        printfn "%A" ((7,10) .+ (3,10))  // 1/1
+        ()
+
+module Problem17=
+    //Write an F# function revlists xs that takes a list of lists xs and reverses all the sub-lists:
+
+    let revlists xs =
+        List.map List.rev xs
+
+    let test() =
+        printfn "%A" (revlists [[0;1;1];[3;2];[];[5]];) 
+        ()
+
+module Problem18=
+    //Write an F# function interleave(xs,ys) that interleaves two lists:
+
+    let rec interleave = function
+               |_,[] -> []
+              
+
+    let test() =
+        printfn "%A" (interleave ([1;2;3],[4;5;6]);) 
         ()
