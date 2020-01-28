@@ -175,9 +175,42 @@ module Problem18=
     //Write an F# function interleave(xs,ys) that interleaves two lists:
 
     let rec interleave = function
-               |_,[] -> []
-              
+           |_,[] -> []                                          //base case, if interleave empty list, return empty list
+           |[],y::ys -> y::ys                                   //empty list and list, return that list
+           |x::xs, y::ys -> let tail = interleave (xs, ys)
+                            let middle = y::tail
+                            x::middle
 
     let test() =
         printfn "%A" (interleave ([1;2;3],[4;5;6]);) 
+        ()
+
+module Problem19=
+    //Write an F# function cut xs that cuts a list into two equal parts:
+
+    let rec gencut num list =
+        match (num,list) with
+        |_,[] -> [],[]
+        |1 , x::xs -> [x],xs
+        |n , x::xs -> let piece1,piece2 = gencut (n-1) xs
+                      x::piece1, piece2
+
+    let cut xs = gencut 2 xs
+    
+    let test() =
+        printfn "%A" (cut [1;2;3;4;5;6];) 
+        ()
+
+module Problem23=
+    //Powerset AFTER YOUR HELP IN CLASS, THANKS YOU
+
+    let rec powerset = function
+       | [] -> [[]] //base case, if empty list, return list of an empty list
+       | (x::xs) ->
+          let current = powerset xs
+          List.map (fun ps -> x::ps) current @ current
+          
+    
+    let test() =
+        printfn "%A" (powerset [1;2;3];) 
         ()
